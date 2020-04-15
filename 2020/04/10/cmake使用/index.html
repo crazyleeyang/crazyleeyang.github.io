@@ -15,7 +15,7 @@
 <meta property="og:description" content="编译选项   编译选项 描述    BUILD_SHARED_LIBS BUILD_STATIC_LIBS&#x3D;ON 表示生成静态库文件   BUILD_STATIC_LIBS BUILD_SHARED_LIBS&#x3D;OFF 表示不生成共享库文件   CMAKE_C_FLAGS 设置 C 编译选项,也可以通过指令 ADD_DEFINITIONS()添加。   CMAKE_CXX_FLAGS 设置 C++编">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-04-10T03:30:21.000Z">
-<meta property="article:modified_time" content="2020-04-10T03:38:25.986Z">
+<meta property="article:modified_time" content="2020-04-15T10:55:55.252Z">
 <meta property="article:author" content="miluo">
 <meta property="article:tag" content="cmake">
 <meta name="twitter:card" content="summary">
@@ -137,8 +137,6 @@
 <td align="left">CMAKE_BUILD_TYPE=debug表示编译成debug版本</td>
 </tr>
 </tbody></table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">cmake -v -DROARING_BUILD_STATIC&#x3D;ON -DCMAKE_INSTALL_PREFIX&#x3D;&#x2F;var&#x2F;local&#x2F;thirdparty&#x2F;installed \</span><br><span class="line">    -DCMAKE_INCLUDE_PATH&#x3D;&quot;&#x2F;var&#x2F;local&#x2F;thirdparty&#x2F;installed&#x2F;include&quot; \</span><br><span class="line">    -DENABLE_ROARING_TESTS&#x3D;OFF \</span><br><span class="line">   - DCMAKE_LIBRARY_PATH&#x3D;&quot;&#x2F;var&#x2F;local&#x2F;thirdparty&#x2F;installed&#x2F;lib;&#x2F;var&#x2F;local&#x2F;thirdparty&#x2F;installed&#x2F;lib64&quot;</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cmake -DBUILD_STATIC_LIBS&#x3D;ON -DBUILD_SHARED_LIBS&#x3D;OFF -DINCLUDE_INSTALL_DIR&#x3D;&#x2F;var&#x2F;local&#x2F;thirdparty&#x2F;installed&#x2F;include&#x2F; -DCMAKE_LIBRARY_PATH&#x3D;&quot;&#x2F;var&#x2F;local&#x2F;thirdparty&#x2F;installed&#x2F;lib;&#x2F;var&#x2F;local&#x2F;thirdparty&#x2F;installed&#x2F;lib64&quot; -G &quot;Unix Makefiles&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">check_if_source_exist $ORC_SOURCE</span><br><span class="line">cd $TP_SOURCE_DIR&#x2F;orc-1.5.8</span><br><span class="line">mkdir build -p &amp;&amp; cd build</span><br><span class="line">rm -rf CMakeCache.txt CMakeFiles&#x2F;</span><br><span class="line">$CMAKE_CMD ..&#x2F; -DBUILD_JAVA&#x3D;OFF \</span><br><span class="line">-DPROTOBUF_HOME&#x3D;$TP_INSTALL_DIR \</span><br><span class="line">-DSNAPPY_HOME&#x3D;$TP_INSTALL_DIR \</span><br><span class="line">-DGTEST_HOME&#x3D;$TP_INSTALL_DIR \</span><br><span class="line">-DLZ4_HOME&#x3D;$TP_INSTALL_DIR \</span><br><span class="line">-DLZ4_INCLUDE_DIR&#x3D;$TP_INSTALL_DIR&#x2F;include&#x2F;lz4 \</span><br><span class="line">-DZLIB_HOME&#x3D;$TP_INSTALL_DIR\</span><br><span class="line">-DBUILD_LIBHDFSPP&#x3D;OFF \</span><br><span class="line">-DCMAKE_INSTALL_PREFIX&#x3D;$TP_INSTALL_DIR</span><br><span class="line"></span><br><span class="line">make -j$PARALLEL &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-
 
       
     </div>
@@ -153,6 +151,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2020/04/15/centos%E5%8D%87%E7%BA%A7cmake/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          centos升级cmake
+        
+      </div>
+    </a>
   
   
     <a href="/2020/04/09/bitmap%E5%BA%94%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
@@ -186,7 +193,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/about/" style="font-size: 10px;">about</a> <a href="/tags/bitmap/" style="font-size: 10px;">bitmap</a> <a href="/tags/cmake/" style="font-size: 10px;">cmake</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a>
+      <a href="/tags/about/" style="font-size: 10px;">about</a> <a href="/tags/bitmap/" style="font-size: 10px;">bitmap</a> <a href="/tags/cmake/" style="font-size: 20px;">cmake</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a>
     </div>
   </div>
 
@@ -208,6 +215,10 @@
       <ul>
         
           <li>
+            <a href="/2020/04/15/centos%E5%8D%87%E7%BA%A7cmake/">centos升级cmake</a>
+          </li>
+        
+          <li>
             <a href="/2020/04/10/cmake%E4%BD%BF%E7%94%A8/">cmake使用</a>
           </li>
         
@@ -221,10 +232,6 @@
         
           <li>
             <a href="/2020/04/09/about/">about</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/09/hello-world/">Hello World</a>
           </li>
         
       </ul>
