@@ -7,15 +7,15 @@
   
   <title>vim | 七白二通</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="常用命令">
+  <meta name="description" content="常用命令   命令作用 命令    所有行的末尾添加行号 :%s&#x2F;$&#x2F;&#x3D;printf(‘_col%d’, line(‘.’))   查找有多少个等号 :%s&#x2F;&#x3D;&#x2F;&#x2F;gn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vim">
 <meta property="og:url" content="http://yoursite.com/2020/04/09/vim/index.html">
 <meta property="og:site_name" content="七白二通">
-<meta property="og:description" content="常用命令">
+<meta property="og:description" content="常用命令   命令作用 命令    所有行的末尾添加行号 :%s&#x2F;$&#x2F;&#x3D;printf(‘_col%d’, line(‘.’))   查找有多少个等号 :%s&#x2F;&#x3D;&#x2F;&#x2F;gn">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-04-09T10:12:05.000Z">
-<meta property="article:modified_time" content="2020-04-09T10:18:05.517Z">
+<meta property="article:modified_time" content="2020-04-15T10:49:51.917Z">
 <meta property="article:author" content="miluo">
 <meta property="article:tag" content="vim">
 <meta name="twitter:card" content="summary">
@@ -93,7 +93,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h5>
+        <h5 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h5><table>
+<thead>
+<tr>
+<th>命令作用</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>所有行的末尾添加行号</td>
+<td>:%s/$/=printf(‘_col%d’, line(‘.’))</td>
+</tr>
+<tr>
+<td>查找有多少个等号</td>
+<td>:%s/=//gn</td>
+</tr>
+</tbody></table>
+
       
     </div>
     <footer class="article-footer">
@@ -139,7 +155,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/about/" rel="tag">about</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bitmap/" rel="tag">bitmap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/" rel="tag">vim</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/about/" rel="tag">about</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bitmap/" rel="tag">bitmap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cmake/" rel="tag">cmake</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/" rel="tag">vim</a></li></ul>
     </div>
   </div>
 
@@ -149,7 +165,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/about/" style="font-size: 10px;">about</a> <a href="/tags/bitmap/" style="font-size: 10px;">bitmap</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a>
+      <a href="/tags/about/" style="font-size: 10px;">about</a> <a href="/tags/bitmap/" style="font-size: 10px;">bitmap</a> <a href="/tags/cmake/" style="font-size: 10px;">cmake</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a>
     </div>
   </div>
 
@@ -169,6 +185,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/04/10/cmake%E4%BD%BF%E7%94%A8/">cmake使用</a>
+          </li>
         
           <li>
             <a href="/2020/04/09/bitmap%E5%BA%94%E7%94%A8/">bitmap应用</a>
