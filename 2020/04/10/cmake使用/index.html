@@ -15,7 +15,7 @@
 <meta property="og:description" content="编译选项   编译选项 描述    BUILD_SHARED_LIBS BUILD_STATIC_LIBS&#x3D;ON 表示生成静态库文件   BUILD_STATIC_LIBS BUILD_SHARED_LIBS&#x3D;OFF 表示不生成共享库文件   CMAKE_C_FLAGS 设置 C 编译选项,也可以通过指令 ADD_DEFINITIONS()添加。   CMAKE_CXX_FLAGS 设置 C++编">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-04-10T03:30:21.000Z">
-<meta property="article:modified_time" content="2020-04-15T10:55:55.252Z">
+<meta property="article:modified_time" content="2020-04-16T03:47:29.329Z">
 <meta property="article:author" content="miluo">
 <meta property="article:tag" content="cmake">
 <meta name="twitter:card" content="summary">
@@ -135,6 +135,10 @@
 <tr>
 <td align="left">CMAKE_BUILD_TYPE</td>
 <td align="left">CMAKE_BUILD_TYPE=debug表示编译成debug版本</td>
+</tr>
+<tr>
+<td align="left">CMAKE_INSTALL_PREFIX</td>
+<td align="left">类似于configure脚本的 –prefix，指定cmake install时的相对地址前缀</td>
 </tr>
 </tbody></table>
 
